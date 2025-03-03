@@ -1,0 +1,244 @@
+:root {
+  --nutral: #232946;
+  --head-line: #fffffe;
+  --stroke: #121629;
+  --secondary:#b8c1ec;
+  --primary: #eebbc3;
+  --accent:#d4d8f0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{ 
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--nutral);
+  text-align: center;
+  font-family:"Noto serif",sans-serif;
+}
+
+h2,h3,h4,h5 {
+  font-family: "poppins",sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: "poppins",sans-serif;
+}
+
+.nav-bar {
+  display: flex;
+  background-color: var(--nutral);
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #121629;
+  position: fixed;
+  z-index: 1;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+  text-align: center;
+  color: var(--head-line);
+}
+
+.nav-links a {
+  padding: 0 10px;
+  color: var(--head-line);
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  height: 2px;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+section {
+  padding: 70px 0;
+  min-height: 100vh;
+}
+
+#Welcome-section h1 {
+  margin-top: 30vh;
+  font-size: 60px;
+  color: var(--head-line);
+}
+
+#Welcome-section p {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 25px 0;
+  font-style: italic;
+}
+
+#Projects {
+  background: var(--secondary);
+  color: var(--nutral);
+}
+
+#Projects h1 {
+  border-bottom: 4px solid var(--nutral);
+  width: fit-content;
+  margin: auto;
+}
+
+#Projects .Projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  place-items: center;
+}
+
+#Projects .project-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 525px;
+  width: 100%;
+  background-color: var(--nutral);
+  color:var(--accent);
+  border-radius: 5px;
+  box-shadow: 8px 8px 10px 5px rgba(100, 100, 100, 0.3);
+  text-decoration: none;
+}
+
+#Projects .project-title img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#Projects .project-title p {
+  padding: 10px;
+  font-size: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+#Projects .project-title p::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  bottom: 6px;
+  left: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--secondary), transparent);
+  transition: transform 0.3s ease-in-out ;
+}
+
+#Projects .project-title p:hover::after{
+  transform: scaleX(1);
+}
+
+.show-all {
+  text-decoration: none;
+  background: var(--nutral);
+  color: var(--accent);
+  display: flex;
+  width: max-content;
+  align-items: center;
+  margin:auto;
+  padding: 0px 15px;
+  font-size: 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.show-all:hover {
+  background: var(--stroke);
+  color: var(--head-line);
+}
+
+
+#Contact {
+  background-color: var(--nutral);
+  color: var(--head-line);
+}
+
+#Contact h1 {
+ margin-top: 300px;
+}
+
+#Contact .coffee-question {
+  color:var(--primary);
+  font-size: 25px;
+  font-style: italic;
+}
+
+#Contact .social-medias {
+  display: flex;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 30px;
+}
+
+
+#Contact .social-media {
+  text-decoration: none;
+  color: var(--head-line);
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  font-size: 22px;
+}
+#Contact .social-media:hover{
+  transform: translateY(10px);
+}
+
+footer {
+  border-top: 3px solid var(--primary);
+  color: blanchedalmond;
+  font-size: 25px;
+  padding: 30px;
+}
+
+@media only screen and (width < 700px) {
+  h1{
+    font-size: 50px;
+  }
+#Projects .project-title{
+  height: 600px;
+  width: 100%;
+}
+}
+
+
+
+
+
+
+
