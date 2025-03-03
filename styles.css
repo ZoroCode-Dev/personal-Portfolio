@@ -181,22 +181,22 @@ section {
 }
 
 
-#contact {
+#Contact {
   background-color: var(--nutral);
   color: var(--head-line);
 }
 
-#contact h1 {
+#Contact h1 {
  margin-top: 300px;
 }
 
-#contact .coffee-question {
+#Contact .coffee-question {
   color:var(--primary);
   font-size: 25px;
   font-style: italic;
 }
 
-#contact .social-medias {
+#Contact .social-medias {
   display: flex;
   max-width: 1000px;
   flex-wrap: wrap;
@@ -206,7 +206,7 @@ section {
 }
 
 
-#contact .social-media {
+#Contact .social-media {
   text-decoration: none;
   color: var(--head-line);
   transition: transform 0.2s ease;
@@ -215,7 +215,7 @@ section {
   margin: 20px;
   font-size: 22px;
 }
-#contact#contact .social-media:hover{
+#Contact#contact .social-media:hover{
   transform: translateY(10px);
 }
 
